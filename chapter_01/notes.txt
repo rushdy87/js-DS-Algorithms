@@ -1,0 +1,76 @@
+Big-O Notation
+  - measures the worst-case complexity of an algorithm.
+  - n represents the number of inputs.
+  - What will happen as n approaches infinity?
+  - Big-O notation is important because it tells you how 
+    efficient the algorithm is.
+____________________________________________________________
+Common Big-O complexities:
+
+- O(1)
+  * O(1) does not change with respect to input space.
+  * O(1) is referred to as being constant time.
+  * An example of an O(1) algorithm is accessing an 
+    item in the array by its index.
+- O(n)
+  * O(n) is linear time.
+  * applies to algorithms that must do n operations in 
+    the worst-case scenario.
+  * An example of an O(n) algorithm is printing numbers 
+    from 0 to n-1 :
+      const linearExample = (n) => {
+        for(let i=0; i<n; i++) {
+          console.log(i);
+        }
+      };
+- O(n2)
+  * O(n2) is quadratic time, and O(n3) is cubic time.
+  * example:
+      const exampleQuadratic = (n) => {
+        for(let i=0; i<n; i++) {
+          for(let j=i; j<n; j++){
+            console.log(j);
+          }
+        }
+      };
+      const exampleCubic = (n) {
+        for(let i=0; i<n; i++) {
+          for(let j=i; j<n; j++){
+            for(let k=j; k<n; k++){
+              console.log(k);
+            }
+          }
+        }
+      }
+- Olog(n)
+      const exampleLogarithmic = (n) => {
+        for(let i= 2; i<=n; i *= 2){
+          console.log(n);
+        }
+      };
+
+- The efficiency of logarithmic time complexities is apparent 
+  with large inputs such as a million items.
+____________________________________________________________
+Rules of Big-O Notation:
+  - Let’s represent an algorithm’s complexity as f(n).
+    n represents the number of inputs
+    f(n)time represents the time needed
+     f(n)space represents the space
+    
+    • Coefficient rule: If f(n) is O(g(n)), then kf(n) is O(g(n)), for any constant k > 0.
+      - It simply requires you to ignore any non-input-size-related constants.
+      - This means that both 5f(n) and f(n) have the same Big-O notation of O(f(n)).
+
+    • Sum rule: If f(n) is O(h(n)) and g(n) is O(p(n)), then f(n)+g(n) is O(h(n)+p(n)).
+      - Imagine a master algorithm that involves two other algorithms. The Big-O notation 
+        of that master algorithm is simply the sum of the other two Big-O notations.
+      
+    • Product rule: If f(n) is O(h(n)) and g(n) is O(p(n)), then f(n)g(n) is O(h(n)p(n)).
+
+    • Transitive rule: If f(n) is O(g(n)) and g(n) is O(h(n)), then f(n) is O(h(n)).
+    
+    • Polynomial rule: If f(n) is a polynomial of degree k, then f(n) is O(n^k).
+
+    • Log of a power rule: log(nk) is O(log(n)) for any constant k > 0.
+____________________________________________________________
