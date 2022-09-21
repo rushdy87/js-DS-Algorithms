@@ -1,0 +1,71 @@
+JavaScript: Unique Parts
+________________________________________________________________________
+JavaScript Scope:
+  - The scope is what defines the access to JavaScript variables.
+  - variables can belong to the global scope or to the local scope.
+  - Global Declaration: Global Scope:
+    * In JavaScript, variables can be declared without using any operators.
+        name = 'Some Name'; // this creates a global variable
+        console.log(name);
+    * This is one of the worst practices in JavaScript. Avoid doing this at 
+      all costs.
+    * Always use var or let to declare variables.
+    * When declaring variables that won’t be modified, use const.
+
+  - Declaration with var: Functional Scope:
+    * var is one keyword used to declare variables.
+    * These variable declarations “float” all the way to the top.
+    * This is known as variable hoisting.
+      function scope1(){
+        var top = "top";
+        bottom = "bottom";
+        console.log(bottom);
+        var bottom;
+      }
+      scope1(); // prints "bottom" - no error
+     The bottom variable declaration, which was at the last line in 
+     the function, is floated to the top, and logging the 
+     variable works.
+  * The key thing to note about the var keyword is that the scope of the 
+    variable is the closest function scope:
+      function scope2(print){
+        if(print) {
+          var insideIf = '12';
+        }
+        console.log(insideIf);
+      }
+      scope2(true); // prints '12' - no error
+
+  - Declaration with let: Block Scope:
+    * Any variables declared this way are in the closest block scope:
+      function scope2(print){
+        if(print) {
+          let insideIf = '12';
+        }
+        console.log(insideIf);
+      }
+      scope3(true); // prints ''
+    
+  - Variable Types:
+    * There are seven primitive data types: boolean, number, string, 
+      undefined, object, function, and symbol.
+    
+  - Truthy/Falsey Check:
+    * The variable is false if it:
+      • false
+      •0
+      • Empty strings ('' and "")
+      • NaN
+      • undefined
+      • null
+    * The variable is true if it:
+      • true
+      • Any number other than 0
+      • Non-empty strings
+      • Non-empty object
+
+  - === vs ==
+    * === is used to check equality more strictly than ==.
+      "5" == 5 // returns true
+      "5" === 5 // returns false
+  
