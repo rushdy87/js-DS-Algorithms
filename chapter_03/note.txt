@@ -1,0 +1,35 @@
+JavaScript Numbers
+________________________________________________________________________
+Number operators in JavaScript:
+  + : addition
+  - : subtraction
+  / : division
+  * : multiplication
+  % : modulus
+________________________________________________________________________
+Number System
+  - JavaScript uses a 32-bit floating-point representation for numbers.
+________________________________________________________________________
+JavaScript Number Object
+  - Since JavaScript uses floating point to represent all numbers, integer 
+    division does not work.
+  - if JavaScript developers want to implement integer division, they can 
+    do one of the following:
+      Math.floor - rounds down to nearest integer
+      Math.round - rounds to nearest integer
+      Math.ceil  - rounds up to nearest integer
+________________________________________________________________________
+Number Algorithms:
+
+  - Primality Test
+    * A primality test can be done by iterating from 2 to n, checking whether 
+      modulus division (remainder) is equal to zero.
+
+  - Prime Factorization
+    * Prime numbers are the basis of encryption and hashing, and prime 
+      factorization is the process of determining which prime numbers 
+      multiply to a given number.
+
+  - Random Number Generator:
+    * JavaScript has a built-in function for generating numbers: Math.random().
+    
