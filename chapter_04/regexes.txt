@@ -1,0 +1,82 @@
+Regular Expressions
+  - Regular expressions (regexes) are a set of characters that define 
+    a search pattern.
+  - The constructor for the RegExp object takes two parameters:
+    * the regular expression, 
+    * and the optional match settings. As shown here:
+      i   ==> Perform case-insensitive matching.
+      g   ==> Perform a global match (find all 
+              matches rather than stopping after
+              first match)
+      m   ==> Perform multiline matching.
+
+  - RegExp has the following two functions:
+    • search(): Tests for matches in a string. This returns the 
+    index of the match.
+    • match(): Tests for matches. This returns all the matches.
+
+  - The JavaScript String object also has the following two 
+    regex-related functions that accept the RegExp object as 
+    an argument:
+    • exec(): Tests for matches in a string. This returns the first match.
+    • test(): Tests for matches in a string. This returns true or false.
+__________________________________________________________________________
+Basic Regex
+  ^: Indicates the start of a string/line.
+  \d: Finds any digit.
+  [abc]: Finds any character between the brackets.
+  [^abc]: Finds any character not between the brackets.
+  [0-9]: Finds any digit between the brackets.
+  [^0-9]: Finds any digit not between the brackets.
+  (x|y): Finds any of the alternatives specified.
+
+        var str = "JavaScript DataStructures";
+        var n = str.search(/DataStructures/);
+        console.log(n); // prints '11'
+__________________________________________________________________________
+Commonly Used Regexes
+  - Any Numeric Characters: /\d+/
+        var reg = /\d+/;
+        reg.test("123"); // true
+        reg.test("33asd"); // true
+        reg.test("5asdasd"); // true
+        reg.test("asdasd"); // false
+
+  - Only Numeric Characters: /^\d+$/
+        var reg = /^\d+$/;
+        reg.test("123"); // true
+        reg.test("123a"); // false
+        reg.test("a"); // false
+
+  - Floating Numeric Characters: /^[0-9]*.[0-9]*[1-9]+$/
+        var reg = /^[0-9]*.[0-9]*[1-9]+$/;
+        reg.test("12"); // false
+        reg.test("12.2"); // true
+  
+  - Only Alphanumeric Characters: /[a-zA-Z0-9]/
+        var reg = /[a-zA-Z0-9]/;
+        reg.test("hello"); // true
+        reg.test("hello"); // true
+        reg.test("112a"); // true
+        reg.test("112"); // true
+        reg.test("^"); // false
+
+  - Query String: /([^?=&]+)(=([^&]*))/
+__________________________________________________________________________
+Encoding:
+  - represents characters in a specialized format for efficient 
+    transmission or storage.
+  - All computer file types are encoded in specific structures.
+
+  - Base64 Encoding:
+    The btoa() function creates a Base64-encoded ASCII string from a string.
+    The .atob() function decodes a string of data that has been encoded 
+    using Base64 encoding
+  
+  - String Shortening
+    Have you ever wondered how URL-shortening sites such as Bit.ly work? 
+    A simplified URL compression algorithm follows a certain structure, 
+    as shown here for www.google.com:
+    1- The database creates a unique integer-based ID for the URL.
+    2- The integer ID is shortened into a string.shortened with
+      Base62 encoding, 11231230 will be VhU2.

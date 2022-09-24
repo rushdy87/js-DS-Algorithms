@@ -1,0 +1,40 @@
+JavaScript Strings
+______________________________________________________________
+JavaScript String Primitive
+  - String Access:
+    For accessing characters, you use .chartAt().
+      'dog'.charAt(1); // returns "o"
+    .charAt(index) takes an index (which starts at 0) and 
+    returns the character at that index location in the string.
+
+    For string (multiple-character) access, you can use 
+    .substring(startIndex, endIndex), which will return 
+    the characters between the specified indices.
+      'YouTube'.substring(1,2); // returns 'o'
+      'YouTube'.substring(3,7); // returns 'tube'
+    If you do not pass a second parameter (endIndex), it will 
+    return all the character values from the specified start 
+    position until the end.
+
+  - String Comparison:
+    In JavaScript, this can be done simply by using less-than 
+    and greater-than operators.
+
+  - String Search
+    .indexOf(searchValue[, fromIndex])
+    This takes a parameter that is the string to be searched as 
+    well as an optional parameter for the starting index for the 
+    search. It returns the position of the matching string, but 
+    if nothing is found, then -1 is returned. Note that this 
+    function is case sensitive.
+      'Red Dragon'.indexOf('Red'); // returns 0
+      'Red Dragon'.indexOf('Dragon', 0); // returns 4
+      'Red Dragon'.indexOf('RedScale'); // returns -1
+
+  - String Decomposition
+    .split(separator)
+
+  - String Replace
+    .replace(string, replaceString) replaces a specified 
+    string within a string variable with another string.
+      "Wizard of Oz".replace("Wizard","Witch"); // "Witch of Oz"

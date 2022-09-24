@@ -1,0 +1,37 @@
+Encryption
+  - TSL is a standard security technology for establishing an 
+    encrypted link between the server and the client (browser).
+    1. The server sends its asymmetric public key to the browser.
+    2. The browser creates a symmetric key for the current 
+      session, which is encrypted by the server’s asymmetric 
+      public key.
+    3. The server decrypts the browser’s session via its private 
+      key and retrieves the session key.
+    4. Both systems have the session key and will use this to 
+      transmit data securely.
+    If the browser was to connect to the same server the next day, 
+    a new session key would be created.
+____________________________________________________________________
+RSA Encryption:
+  - RSA is an encryption algorithm based on the difficulty of 
+    factoring large integers.
+  - There are three phases in the process: 
+  - key generation, encryption, and decryption.
+    Key generation: The public key (shared) and private key (kept 
+    secret) are generated.
+    Encryption: The secret message can be encrypted via the public key.
+    Decryption: Only the private key can be used to decrypt the message.
+
+Here’s an overview of the algorithm:
+  1. Select two (usually large) prime numbers, p and q.
+    a. The product of p and q is denoted as n.
+    b. The product of (p-1) and (q-1) is denoted as phi.
+  2. Choose two exponents, e and d.
+    a. e is typically 3. Other values greater than 2 can be used.
+    b. d is a value such that (e × d) % phi = 1.
+Encryption process is as shown:
+        m - message:
+        m^e % n = c
+        c - encrypted message
+Decryption process is as shown:
+        c^d % n = m
