@@ -1,0 +1,13 @@
+Multidimensional Arrays
+  - JavaScript does not have multidimensional arrays.
+  - Instead, there are “jagged” arrays.
+    * A jagged array is an array whose elements are arrays.
+    * The elements of a jagged array can be of different 
+      dimensions and sizes.
+
+        const jaggedArr = [
+          [1, 2, 3],
+          [1, 2, 3, 4, 5],
+          [1],
+          [6, 7, 8]
+        ];

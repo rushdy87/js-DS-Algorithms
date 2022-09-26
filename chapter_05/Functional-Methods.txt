@@ -1,0 +1,35 @@
+JavaScript Functional Array Methods
+
+- Map
+  The map function applies passed function transformation 
+  to every element in the array and returns a new array 
+  with those transformations applied.
+
+      [1,2,3,4].map(function (value){ return value*10;});
+      // [10, 20, 30, 40]
+
+- Filter
+  The filter function returns only those elements of the 
+  array that meet a passed condition parameter. Again, 
+  this does not change the original array.
+      [100,2003,10,203,333,12].filter(function (value){
+        return value > 100;
+      });
+      // [2003, 203, 333]
+
+- Reduce
+  The reduce function combines all the elements in the array 
+  into one value using a passed transformation function 
+  parameter.
+      var sum = [0,1,2,3,4].reduce( function (prevVal, currentVal, index, array) {
+        return prevVal + currentVal;
+      });
+      console.log(sum); // prints 10
+  This function also can take initialValue as its second 
+  argument, which initializes the reduce value. For example, 
+  providing an initialValue of 1 in the previous example will 
+  yield 11, as shown here:
+      var sum = [0,1,2,3,4].reduce( function (prevVal, currentVal, index, array) {
+        return prevVal + currentVal;
+      }, 1);
+      console.log(sum); // prints 11

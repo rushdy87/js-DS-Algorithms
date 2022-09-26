@@ -1,0 +1,50 @@
+JavaScript Arrays
+  - For any data structure, developers are interested in 
+    time and space complexity associated with the four 
+    fundamental operations:
+      access,
+      insertion,
+      deletion,
+      and search.
+
+  - Insertion:
+    .push(element) method. This method adds a new element 
+    at the end of the array.
+    The time complexity of this operation is O(1) in theory.
+
+  - Deletion
+    .pop() method. This method removes the last-added element 
+    of the array. This also returns the removed element.
+    The time complexity of .pop is O(1) similarly to .push.
+    .shift() method. This method will remove the first element 
+    and return it.
+
+  - Access:
+    Accessing an array at a specified index only takes O(1) 
+    because this process uses that index to get the value 
+    directly from the address in memory.
+
+  - Iteration:
+    There are multiple ways to iterate through an array in 
+    JavaScript. They all have a time complexity of O(n) since 
+    the iteration is visiting n number of elements.
+    for()
+    for(in)
+    for(of)
+    forEach()
+    while()
+_______________________________________________________________________
+Helper Functions
+  - .slice(begin,end)
+  returns a portion of an existing array without modifying the array.
+  - .splice(begin,size,element1,element2...)
+    returns and changes the contents of an array by removing existing 
+    elements and/or adding new elements.
+  - .concat()
+    adds new elements to the array at the end of the array and returns
+    the array.
+  - .length Property
+_______________________________________________________________________
+Spread Operator:
+  The spread operator, denoted by three periods (...), is used to expand 
+  arguments where zero arguments are expected.
