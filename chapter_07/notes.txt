@@ -1,0 +1,24 @@
+JavaScript Memory Management
+_______________________________________________________
+- In any program, a variable takes up some memory.
+- the V8 JavaScript engine and other modern JavaScript 
+  engines have garbage collectors that delete unused 
+  variables for the programmer.
+_______________________________________________________
+Memory Leaks
+  - A memory leak is a failure in a program to release 
+    discarded memory, causing impaired performance and 
+    sometimes even failure.
+  - Memory leaks can happen when JavaScript engines’ 
+    garbage collectors do not free memory properly.
+_______________________________________________________
+The delete Operator
+  The delete operator can be used to delete an unwanted 
+  object property.
+      const obj = {
+        prop: 'test'
+      };
+      console.log(obj.prop); // test
+      delete obj.prop;
+      console.log(obj.prop); // undefined
+_______________________________________________________
