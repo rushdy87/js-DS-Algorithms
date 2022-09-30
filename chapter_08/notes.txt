@@ -1,0 +1,25 @@
+Recursion
+  - a recursive function is a function that calls itself.
+__________________________________________________________________________
+Rules of Recursion
+  - Base Case
+    * In recursion, there must be a base case (also 
+      referred to as terminating case)
+          function countDownToZero(n) {
+            // base case. Stop at 0
+            if (n <= 0) {
+                return; // stop the function
+            } else {
+                console.log(n);
+                countDownToZero(n - 1); // count down 1
+            }
+          }
+          countDownToZero(12);
+    * The base case for this function is when n is smaller or equal to 0.
+  - Divide-and-Conquer Method
+    * the divide-and-conquer method is when a problem is solved by solving 
+      all of its smaller components.
+    * Fibonacci Sequence ('./fibonacci.js')
+    * Pascal’s Triangle.('./pascals_triangle.js')
+__________________________________________________________________________
+Big-O for Recursion
