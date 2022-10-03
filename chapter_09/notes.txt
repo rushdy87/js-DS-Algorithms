@@ -1,0 +1,49 @@
+Sets
+  - Sets are one of the most fundamental data structures.
+  - it is a group of definite, distinct objects.
+  - a set is a group of unordered unique (no duplicate) elements.
+  - Sets are important for checking and adding a unique element in O(1) 
+    constant time.
+  - Set is natively supported in JavaScript as follows:
+        var exampleSet = new Set();
+  - The native Set object has only one property: size (integer). This property 
+    is the current number of elements within the set.
+_______________________________________________________________________________
+Set Operations
+  - Insertion:
+    Set can add items, but duplicates are not allowed.
+        exampleSet.add(1); // exampleSet: Set(1) {1}
+        exampleSet.add(1); // exampleSet: Set(1) {1}
+        exampleSet.add(2); // exampleSet: Set(2) {1, 2}
+    Notice that adding the duplicate element does not work for a set.
+  - Deletion:
+    Set.delete returns a boolean (true if that element exists and was deleted, 
+    false otherwise).
+        var exampleSet = new Set();
+        exampleSet.add(1); // exampleSet: Set {1}
+        exampleSet.delete(1); // true
+        exampleSet.add(2); // exampleSet: Set {2}
+  - Contains:
+    Set.has does a quick O(1) lookup to check whether the element exists within 
+    the set.
+        var exampleSet = new Set();
+        exampleSet.add(1); // exampleSet: Set(1) {1}
+        exampleSet.has(1); // true
+        exampleSet.has(2); // false
+        exampleSet.add(2); // exampleSet: Set(2) {1, 2}
+        exampleSet.has(2); // true
+_______________________________________________________________________________
+Other Utility Functions:
+  - Intersection:
+    he intersection of two sets consists of the common elements between those 
+    two sets. ('./intersect.js).
+  - isSuperSet:
+    a set is a “superset” of another set if it contains all the elements of 
+    the other set. ('./super-set.js)
+  - Union:
+    the union of two sets combines the elements from both sets. This function 
+    returns a new set with both elements without duplicates. ('./union.js).
+  - Difference:
+    the difference of set A from set B is all of the elements in set A that are 
+    not in set B. This function implements the difference operation by making 
+    use of the native delete method. (./)
