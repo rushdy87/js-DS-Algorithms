@@ -1,0 +1,100 @@
+Searching and Sorting:
+  - Searching refers to iterating over the data structure’s elements to 
+    retrieve some data.
+  - Sorting refers to putting the data structure’s elements in order.
+  - The searching and sorting algorithms are different for every data 
+    structure.
+_______________________________________________________________________________
+Searching:
+  - When searching in an array, there are two main techniques depending on 
+    whether the array is sorted.
+_______________________________________________________________________________
+Linear Search:
+  - A linear search works by going through each element of the array one index 
+    after another sequentially.
+  - ('./linear-search.js').
+  - Time Complexity: O(n)
+  - A linear search algorithm like this is great because it works whether or 
+    not the array is sorted.
+_______________________________________________________________________________
+Binary Search:
+  - Works on sorted data.
+  - binary searches can check the middle value to see whether the desired value 
+    is greater or smaller than it.
+    If the desired value is smaller, this algorithm can search through the 
+    smaller parts, 
+    or it can search through the bigger parts if the desired value is bigger.
+  - ('./binary-search.js').
+  - The binary search algorithm is fast but can be done only if the array is 
+    sorted.
+  - Time Complexity: O(logN).
+_______________________________________________________________________________
+Sorting:
+  - it is faster and easier to locate items in a sorted array than in an 
+    unsorted sorted array.
+_______________________________________________________________________________
+Bubble Sort:
+  - the simplest sorting algorithm.
+  - iterates over the entire array and swaps elements if one is bigger than the 
+    other.
+  - ('./bubble-sort.js').
+  - Time Complexity: O(n2)
+_______________________________________________________________________________
+Selection Sort:
+  - Selection sorting works by scanning the elements for the smallest element 
+    and inserting it into the current position of the array.
+  - ('./selection-sort.js').
+  - Time Complexity: O(n2).
+_______________________________________________________________________________
+Insertion Sort
+  - Insertion sort works similarly to selection sort by searching the array 
+    sequentially and moving the unsorted items into a sorted sublist on the 
+    left side of the array.
+  - ('./insertion-sort.js').
+  - Time Complexity: O(n2).
+_______________________________________________________________________________
+Quicksort
+  - Quicksort works by obtaining a pivot and partitioning the array around 
+    it (bigger elements on one side and smaller elements on the other side
+    ) until everything is sorted.
+  - ('./quick-sort.js').
+  - Time Complexity: O(nlog2(n)) on average, O(n2) for worst case.
+  - One downside about a quicksort algorithm is that it could potentially 
+    be O(n2) if a bad pivot is always picked.
+_______________________________________________________________________________
+Quickselect
+  - Quickselect is a selection algorithm to find the kth smallest element in 
+    an unordered list.
+  - Quickselect uses the same approach as a quicksort algorithm.
+  - Instead of recursing both sides like quicksort, however, it recurses only 
+    the side for the element. This reduces the complexity from O(nlog2(n)) to 
+    O(n).
+  - ('./quick-select-sort.js').
+  - Time Complexity: O(n).
+_______________________________________________________________________________
+Mergesort
+  - Mergesort works by dividing the array into subarrays until each array has 
+    one element. Then, each subarray is concatenated (merged) in a sorted order.
+  - The merge function should add all the elements from both arrays in sorted 
+    order in a “result array.” To do this, the index of each array can be 
+    created to keep track of elements already compared. Once one array exhausts 
+    all its elements, the rest can be appended to the result array.
+  - ('./merge.js').
+  - Time Complexity: O(nlog2(n)).
+_______________________________________________________________________________
+Count Sort
+  - Count sort can be done in O(k+n) because it does not compare values.
+  - It works only for numbers and given a certain range.
+  - Instead of sorting by swapping elements, this count works by counting 
+    occurrences of each element in the array. Once occurrences of each element 
+    are counted, the new array can be created using those occurrences. This 
+    sorts the data without having to swap elements.
+  - ('./count-sort.js')
+  - Time Complexity: O(k+n).
+_______________________________________________________________________________
+JavaScript’s Built-in Sort:
+  - JavaScript has a built-in sort() method for an array object, which sorts 
+    elements by ascending order. To use it, there is an optional parameter that 
+    you can pass in a comparator function.
+  - the default comparator function sorts alphabetically, so it will not work for 
+    numbers.
